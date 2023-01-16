@@ -1,0 +1,81 @@
+body {
+  background-color: #131316;
+  color: azure;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 101vh;
+}
+h1 {
+  font-size: 4em;
+}
+h2 {
+  font-size: 2em;
+}
+p {
+  font-size: 2em;
+}
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 3s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+#trolles {
+  display: flex;
+}
+
+.troll {
+  background-color: rgba(128, 128, 128, 0.192);
+  margin: 10px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.troll:nth-child(2) {
+  transition-delay: 300ms;
+}
+
+.troll:nth-child(3) {
+  transition-delay: 600ms;
+}
+
+.troll:nth-child(4) {
+  transition-delay: 900ms;
+}
+.tenor-gif-embed {
+  position: absolute;
+  z-index: -99;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wall {
+  position: fixed;
+  filter: brightness(30%);
+  transition: all 0.5s;
+}
+.not-blur {
+  filter: blur(0) brightness(30%);
+}
+.blur {
+  filter: blur(5px) brightness(40%);
+}
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
