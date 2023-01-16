@@ -11,6 +11,7 @@ section {
   place-items: center;
   align-content: center;
   min-height: 101vh;
+  width: 100vw;
 }
 h1 {
   font-size: 4em;
@@ -36,6 +37,7 @@ p {
 
 #trolles {
   display: flex;
+  justify-content: center;
 }
 
 .troll {
@@ -43,6 +45,7 @@ p {
   margin: 10px;
   padding: 5px;
   border-radius: 20px;
+  width: 15%;
 }
 
 .troll:nth-child(2) {
@@ -73,6 +76,11 @@ p {
 }
 .blur {
   filter: blur(5px) brightness(40%);
+}
+@media (max-width: 600px) {
+  .wall {
+    content: url(img/wall-mobile.jpg);
+  }
 }
 @media (prefers-reduced-motion) {
   .hidden {
